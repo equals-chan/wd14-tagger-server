@@ -25,9 +25,9 @@ logger.add(
 )
 
 
-class ServerSetting(BaseSettings):
+class ServerSetting():
     server_port: int = 10010
-    server_host: str = "127.0.0.1"
+    server_host: str = "0.0.0.0"
 
     @model_validator(mode="after")
     def check(self):
